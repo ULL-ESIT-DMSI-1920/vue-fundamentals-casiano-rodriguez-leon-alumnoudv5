@@ -29,9 +29,9 @@ Be sure to follow these steps:
 - [ X ] Discuss the syntax of JS inside moustaches
 - [ ] Learn to read the errors in the console
 - [ X ] Add items to data and show them using v-for
-- [  ] Use Vue Devtools. Configure it to work with file://
-- [  ] Add v-on: Start by simulating in the console what we are going to do
-- [  ] Add button to add the new item when clicked
+- [ X ] Use Vue Devtools. Configure it to work with file://
+- [ X ] Add v-on: Start by simulating in the console what we are going to do
+- [ X ] Add button to add the new item when clicked
 - [  ] Add v-on:keyup.enter to the input element
 - [  ] Shorthands for v-on 
 - [  ] Use a method `saveItem` to factorice
