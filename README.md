@@ -27,7 +27,7 @@ Be sure to follow these steps:
 - [  ] Add an input an synchronize it with the interpolated text to see it
 - [  ] Explore the app in the console
 - [  ] Discuss the syntax of JS inside moustaches
-- [ ] Learn to read the errors in the console
+- [  ] Learn to read the errors in the console
 - [  ] Add items to data and show them using v-for
 - [  ] Use Vue Devtools. Configure it to work with file://
 - [  ] Add v-on: Start by simulating in the console what we are going to do
@@ -41,28 +41,27 @@ Be sure to follow these steps:
 
 ### Next Steps: Add State to your App
 
-Add states **default** and **edition** to your app. The views on each state will be different
+Add a `state` variable to the app `data` to represent the states of the app. 
+There will be two states: **default** and **edition**. 
+The views on each state will be different
 
 State **edition** corresponds to when the user is adding/editing a new item: there will be an **input** form to input the item, buttons to **cancel** the edition, to **save the item**, etc.
 
+<img src="images/edition.png" width="60%" >
+
 State **default** corresponds to when the user is the initial state. There will be a button to **add** a new item 
+
+<img src="images/default.png" width="60%" >
 
 Here is the DFA with the transitions:
 
-<img src="images/dfa.png" width="60%">
+<img src="images/dfa.png" width="90%">
 
 - [  ] Show the `div` with class `add-item-form` only if the state is `edition`
 - [  ] Add a div with class `header` with two buttons: one for adding an item and the other for cancelling the edition
 - [  ] Show the  `add button` only if the state is `default` and the `cancel` button  when it is not
 - [  ] Add the `changeState` method that reflect the transitions between both states 
 
-#### View of the Edition State
-
-<img src="images/edition.png" width="60%" >
-
-#### View of the Default State
-
-<img src="images/default.png" width="60%" >
 
 ## v-bind steps
 
