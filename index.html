@@ -12,9 +12,15 @@
     <div id="shopping-list">
         <div class="header">
             <h1>{{ title.toLocaleUpperCase() }}</h1>
-            <button @click="saveItem" class="btn btn-primary">Save Item</button>
+            <button v-if="state == 'default'" @click="state='edition'" class="btn btn-primary">Add Item</button>
+            <button v-if="state == 'edition'" @click="state='default'" class="btn btn-cancel">Cancel</button>
         </div>   
-        <input v-model="newItem" type="text" name="newItem" id="newItem" @keyup.enter="saveItem">
+
+        <div v-if="state == 'edition'" class="add-item-form">
+            <input v-model="newItem" type="text" name="newItem" id="newItem" @keyup.enter="saveItem">
+            <button @click="saveItem" class="btn btn-primary" :disabled="noInput">Save Item</button>
+        </div>
+
         <p v-if="isEmpty">Nothing to do</p>
         <ul>
             <li v-for="item in items">{{ item }}</li>
@@ -24,13 +30,14 @@
         const shoppingList = new Vue({
             el: "#shopping-list",
             data: {
+                state: "default",
                 title: "Shopping List",
                 newItem: '',
-                items: [
-                ]
+                items: [ "Oranges", "Lemons" ]
             },
             methods: {
                 saveItem() {
+                    console.log(this.items.length)
                     this.items.push(this.newItem); 
                     this.newItem = ''
                 }
@@ -38,6 +45,9 @@
             computed: {
                 isEmpty() {
                     return this.items.length == 0
+                },
+                noInput() {
+                    return this.newItem.length == 0
                 }
             }
         })
