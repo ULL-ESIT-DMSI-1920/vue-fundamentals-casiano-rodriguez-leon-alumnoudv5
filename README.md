@@ -32,12 +32,12 @@ Be sure to follow these steps:
 - [ X ] Use Vue Devtools. Configure it to work with file://
 - [ X ] Add v-on: Start by simulating in the console what we are going to do
 - [ X ] Add button to add the new item when clicked
-- [  ] Add v-on:keyup.enter to the input element
-- [  ] Shorthands for v-on 
-- [  ] Use a method `saveItem` to factorice
-- [  ] Reset the input when finished the insertion
-- [  ] Check the method using the debugger
-- [  ] v-if and v-else: add a conditional message when the list is empty
+- [ X ] Add v-on:keyup.enter to the input element
+- [ X ] Shorthands for v-on 
+- [ X ] Use a method `saveItem` to factorice
+- [ X ] Reset the input when finished the insertion
+- [ X ] Check the method using the debugger
+- [ X ] v-if and v-else: add a conditional message when the list is empty
 
 ### Next Steps: Add State to your App
 
