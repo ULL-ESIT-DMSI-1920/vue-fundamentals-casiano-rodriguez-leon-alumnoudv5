@@ -51,10 +51,10 @@ Here is the DFA with the transitions:
 
 <img src="images/dfa.png" width="60%">
 
-- [  ] Show the `div` with class `add-item-form` only if the state is `edition`
-- [  ] Add a div with class `header` with two buttons: one for adding an item and the other for cancelling the edition
-- [  ] Show the  `add button` only if the state is `default` and the `cancel` button  when it is not
-- [  ] Add the `changeState` method that reflect the transitions between both states 
+- [ X ] Show the `div` with class `add-item-form` only if the state is `edition`
+- [ X ] Add a div with class `header` with two buttons: one for adding an item and the other for cancelling the edition
+- [ X ] Show the  `add button` only if the state is `default` and the `cancel` button  when it is not
+- [ X ] Add the `changeState` method that reflect the transitions between both states 
 
 #### View of the Edition State
 
