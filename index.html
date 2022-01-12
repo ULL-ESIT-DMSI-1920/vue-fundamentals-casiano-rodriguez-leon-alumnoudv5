@@ -23,7 +23,7 @@
 
         <p v-if="isEmpty">Nothing to do</p>
         <ul>
-            <li v-for="item in items">{{ item }}</li>
+            <li v-for="item in items" :class="{strikeout: item.purchased}">{{ item.label }}</li>
         </ul>
     </div>
     <script>
@@ -33,12 +33,12 @@
                 state: "default",
                 title: "Shopping List",
                 newItem: '',
-                items: [ "Oranges", "Lemons" ]
+                items: [ {label: "Oranges", purchased: false}, {label: "Lemons", purchased: true} ]
             },
             methods: {
                 saveItem() {
                     console.log(this.items.length)
-                    this.items.push(this.newItem); 
+                    this.items.push({label: this.newItem, purchased: false}); 
                     this.newItem = ''
                 }
             },
